@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    border: 15px solid ;
+    border-color: white green white orange;
+}
+
+.sky{
+    background-image: url("./sky.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.road{
+    background-image: url("./road.jpg");
+    width: 500%;
+    height: 200px;
+    position: absolute;
+    bottom: 0px;
+    animation:road 8s normal infinite linear ;
+}
+
+@keyframes road{
+    100%{
+        transform: translateX(-2500px);
+    }
+}
+
+.city{
+    background-image: url("./city.png");
+    /* background-repeat: no-repeat; */
+    width: 500%;
+    height: 280px;
+    position: absolute;
+    bottom: 170px;
+    animation:city 15s normal infinite linear
+
+}
+@keyframes city{
+    100%{
+        transform: translateX(-1800px);
+    }
+}
+
+.car{
+    background-image: url("./car1.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 550px;
+    height: 350px;
+    z-index: 3;
+    position: absolute;
+    bottom: 20px;
+    left: 250px; 
+    animation: car 0.5s infinite linear alternate;
+
+    /* flight */
+
+    /* left: 0px;
+    animation: car 6s infinite linear normal;
+    */
+}
+
+/* Flight takeoff */
+
+
+/* @keyframes car{
+    0%{
+        transform: translateX(-600px);
+    }
+    30%{
+        transform: translateX(200px);
+    }
+    100%{
+        transform: translate(1200px,-400px)rotate(-25deg);
+    }
+} */
+
+
+/* car */
+
+@keyframes car{
+    0%{
+        transform: translateY(-1px);
+    }
+    100%{
+        transform: translateY(1px);
+    }
+}
+
+.front-wheel{
+    background-image: url("./wheel.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 93px;
+    height: 93px;
+    position: absolute;
+    bottom: 108px;
+    left: 631px;
+    animation: wheel 2s normal infinite linear;
+
+}
+.back-wheel{
+    background-image: url("./wheel.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 93px;
+    height: 93px;
+    position: absolute;
+    bottom: 108px;
+    left: 301px;
+    animation: wheel 2s normal infinite linear;
+
+}
+
+@keyframes wheel{
+    100%{
+        transform: rotate(360deg);
+    }
+}
